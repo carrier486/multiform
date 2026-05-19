@@ -1,0 +1,87 @@
+    <!-- CREATE PAGE -->
+    <div class="feed-pg" id="fpg-create" style="overflow-y:auto;scrollbar-width:none;-ms-overflow-style:none;">
+      <div style="padding:136px 16px 80px;">
+        <div style="margin-bottom:24px;">
+          <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--lime);letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px;">크리에이터</div>
+          <div style="font-size:28px;font-weight:900;letter-spacing:-.05em;color:var(--t);margin-bottom:4px;">만들기</div>
+          <div style="font-size:12px;color:var(--sub);">AI게임 · AI드라마 · AI웹툰 · 라이브 · 소식</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:9px;margin-bottom:24px;">
+          <div onclick="openCreateDetail('game')" style="display:flex;align-items:center;gap:13px;padding:16px;background:rgba(184,255,87,.06);border-radius:16px;border:1px solid rgba(184,255,87,.15);cursor:pointer;">
+            <div style="font-size:28px;flex-shrink:0;">🤖</div>
+            <div><div style="font-size:14px;font-weight:700;color:var(--t);margin-bottom:2px;">AI 게임 제작</div><div style="font-size:11px;color:var(--sub);">말로 설명하면 AI가 게임을 만들어줘요</div></div>
+            <div style="margin-left:auto;font-size:16px;color:var(--sub);">→</div>
+          </div>
+          <div onclick="openCreateDetail('drama')" style="display:flex;align-items:center;gap:13px;padding:16px;background:var(--s);border-radius:16px;border:1px solid var(--br);cursor:pointer;">
+            <div style="font-size:28px;flex-shrink:0;">🎬</div>
+            <div><div style="font-size:14px;font-weight:700;color:var(--t);margin-bottom:2px;">AI 드라마 제작</div><div style="font-size:11px;color:var(--sub);">내 캐릭터로 AI 숏폼 드라마 제작</div></div>
+            <div style="margin-left:auto;font-size:16px;color:var(--sub);">→</div>
+          </div>
+          <div onclick="openCreateDetail('webtoon')" style="display:flex;align-items:center;gap:13px;padding:16px;background:var(--s);border-radius:16px;border:1px solid var(--br);cursor:pointer;">
+            <div style="font-size:28px;flex-shrink:0;">📖</div>
+            <div><div style="font-size:14px;font-weight:700;color:var(--t);margin-bottom:2px;">AI 웹툰 제작</div><div style="font-size:11px;color:var(--sub);">AI로 나만의 웹툰 스토리 완성</div></div>
+            <div style="margin-left:auto;font-size:16px;color:var(--sub);">→</div>
+          </div>
+          <div onclick="openCreateDetail('live')" style="display:flex;align-items:center;gap:13px;padding:16px;background:var(--s);border-radius:16px;border:1px solid var(--br);cursor:pointer;">
+            <div style="font-size:28px;flex-shrink:0;">🔴</div>
+            <div><div style="font-size:14px;font-weight:700;color:var(--t);margin-bottom:2px;">라이브 방송</div><div style="font-size:11px;color:var(--sub);">실시간 게임 방송 · 팬과 소통</div></div>
+            <div style="margin-left:auto;font-size:16px;color:var(--sub);">→</div>
+          </div>
+          <div onclick="openCreateDetail('post')" style="display:flex;align-items:center;gap:13px;padding:16px;background:var(--s);border-radius:16px;border:1px solid var(--br);cursor:pointer;">
+            <div style="font-size:28px;flex-shrink:0;">📢</div>
+            <div><div style="font-size:14px;font-weight:700;color:var(--t);margin-bottom:2px;">소식 공유</div><div style="font-size:11px;color:var(--sub);">게임 근황 · 일상 · 커뮤니티</div></div>
+            <div style="margin-left:auto;font-size:16px;color:var(--sub);">→</div>
+          </div>
+        </div>
+        <div style="font-size:19px;font-weight:800;letter-spacing:-.04em;color:var(--t);margin-bottom:12px;">내 현황</div>
+        <div style="display:flex;justify-content:space-around;background:var(--ld);border:1px solid rgba(184,255,87,.15);border-radius:16px;padding:16px;">
+          <div style="text-align:center;"><div style="font-size:24px;font-weight:900;letter-spacing:-.04em;color:var(--lime);line-height:1;">1,284</div><div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--sub);margin-top:2px;">플레이</div></div>
+          <div style="text-align:center;"><div style="font-size:24px;font-weight:900;letter-spacing:-.04em;color:var(--lime);line-height:1;">₩12K</div><div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--sub);margin-top:2px;">이번달</div></div>
+          <div style="text-align:center;"><div style="font-size:24px;font-weight:900;letter-spacing:-.04em;color:var(--lime);line-height:1;">94</div><div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--sub);margin-top:2px;">팔로워</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CREATE DETAIL PAGE -->
+    <div class="feed-pg" id="fpg-create-detail" style="overflow-y:auto;scrollbar-width:none;-ms-overflow-style:none;">
+      <div style="padding:0 0 80px;">
+        <div style="position:sticky;top:0;z-index:10;background:var(--bg);padding:52px 16px 12px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--br);">
+          <button onclick="closeCreateDetail()" style="width:36px;height:36px;border-radius:50%;background:var(--s);border:none;color:var(--t);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;">←</button>
+          <div id="cd-title" style="font-size:17px;font-weight:800;color:var(--t);"></div>
+        </div>
+        <div id="cd-ai" style="display:none;padding:20px 16px;">
+          <div id="cd-ai-desc" style="font-size:13px;color:var(--sub);margin-bottom:20px;line-height:1.6;white-space:pre-line;"></div>
+          <div style="background:var(--s);border:1px solid var(--br);border-radius:16px;padding:16px;margin-bottom:16px;">
+            <textarea id="cd-prompt" placeholder="어떤 걸 만들고 싶은지 자유롭게 설명해주세요..." style="width:100%;min-height:120px;background:transparent;border:none;color:var(--t);font-size:14px;line-height:1.6;resize:none;outline:none;font-family:'Noto Sans KR',sans-serif;box-sizing:border-box;"></textarea>
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;" id="cd-examples"></div>
+          <button style="width:100%;padding:14px;background:var(--lime);color:#000;border:none;border-radius:14px;font-size:15px;font-weight:800;cursor:pointer;">AI로 만들기 ✨</button>
+        </div>
+        <div id="cd-live" style="display:none;padding:20px 16px;">
+          <div style="width:100%;aspect-ratio:9/16;background:#000;border-radius:16px;margin-bottom:16px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;border:1px solid var(--br);">
+            <div style="font-size:48px;">📷</div>
+            <div style="font-size:13px;color:var(--sub);">카메라 화면</div>
+          </div>
+          <div style="display:flex;gap:10px;justify-content:center;margin-bottom:16px;">
+            <button style="width:56px;height:56px;border-radius:50%;background:var(--s);border:1px solid var(--br);font-size:22px;cursor:pointer;">🔄</button>
+            <button style="width:72px;height:72px;border-radius:50%;background:#ff4444;border:none;font-size:28px;cursor:pointer;">⏺</button>
+            <button style="width:56px;height:56px;border-radius:50%;background:var(--s);border:1px solid var(--br);font-size:22px;cursor:pointer;">🎙</button>
+          </div>
+          <input type="text" placeholder="방송 제목을 입력하세요" style="width:100%;height:44px;padding:0 14px;background:var(--s);border:1px solid var(--br);border-radius:12px;color:var(--t);font-size:14px;outline:none;font-family:'Noto Sans KR',sans-serif;box-sizing:border-box;margin-bottom:12px;" />
+          <button style="width:100%;padding:14px;background:#ff4444;color:#fff;border:none;border-radius:14px;font-size:15px;font-weight:800;cursor:pointer;">🔴 라이브 시작</button>
+        </div>
+        <div id="cd-post" style="display:none;padding:20px 16px;">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+            <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#062a12,#1a5020);flex-shrink:0;"></div>
+            <div style="font-size:14px;font-weight:700;color:var(--t);">나의 소식</div>
+          </div>
+          <textarea placeholder="지금 무슨 게임 하고 있나요? 근황을 공유해보세요 🎮" style="width:100%;min-height:140px;background:var(--s);border:1px solid var(--br);border-radius:16px;padding:14px;color:var(--t);font-size:14px;line-height:1.6;resize:none;outline:none;font-family:'Noto Sans KR',sans-serif;box-sizing:border-box;margin-bottom:12px;"></textarea>
+          <div style="display:flex;gap:8px;margin-bottom:20px;">
+            <button style="flex:1;padding:10px;background:var(--s);border:1px solid var(--br);border-radius:12px;color:var(--t);font-size:13px;cursor:pointer;">📷 사진</button>
+            <button style="flex:1;padding:10px;background:var(--s);border:1px solid var(--br);border-radius:12px;color:var(--t);font-size:13px;cursor:pointer;">🎮 게임태그</button>
+            <button style="flex:1;padding:10px;background:var(--s);border:1px solid var(--br);border-radius:12px;color:var(--t);font-size:13px;cursor:pointer;">😊 이모지</button>
+          </div>
+          <button style="width:100%;padding:14px;background:var(--lime);color:#000;border:none;border-radius:14px;font-size:15px;font-weight:800;cursor:pointer;">소식 공유하기</button>
+        </div>
+      </div>
+    </div>
